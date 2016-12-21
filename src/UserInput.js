@@ -3,7 +3,6 @@ import {
 	View,
 	TextInput,
 	StyleSheet,
-	Text
 } from 'react-native';
 
 export default class UserInput extends Component {
@@ -23,7 +22,7 @@ export default class UserInput extends Component {
 	}
 
 	_onSubmitEditing() {
-		this.setState({ text : 'mantap' });
+		this.setState({ text : 'Submitted -Yay!' });
 	}
 
 	render() {
@@ -38,7 +37,6 @@ export default class UserInput extends Component {
 					returnKeyType={'search'}
 				 	placeholder="Enter a City or Place..."
 				/>
-				<Text>text: {this.state.text}</Text>
 			</View>
 		);
 	}

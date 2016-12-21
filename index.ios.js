@@ -6,12 +6,14 @@ import {
   View
 } from 'react-native';
 import Maps from './src/Maps';
+import UserInput from './src/UserInput';
 
 export default class Gmapweather extends Component {
   render() {
     return (
       <View style={styles.container}>
         <Maps style={styles.map}/>
+        <UserInput />
       </View>
     );
   }

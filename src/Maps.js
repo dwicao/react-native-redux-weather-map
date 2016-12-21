@@ -1,8 +1,5 @@
 import React, { Component, PropTypes } from 'react';
 import MapView from 'react-native-maps';
-import {
-	StyleSheet,
-} from 'react-native';
 
 export default class Maps extends Component {
 	render() {

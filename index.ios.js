@@ -2,25 +2,27 @@ import React, { Component } from 'react';
 import {
   AppRegistry,
   StyleSheet,
-  Text,
-  View
 } from 'react-native';
-import Maps from './src/Maps';
-import UserInput from './src/UserInput';
+import Main from './main';
+import { Provider } from 'react-redux';
+import configureStore from './src/store/configureStore';
 
-export default class Gmapweather extends Component {
+const store = configureStore();
+
+export default class App extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Maps style={styles.map}/>
-        <UserInput />
-      </View>
+        <Provider store={store}>
+          <Main
+            viewStyle={styles.view}
+            mapStyle={styles.map}/>
+        </Provider>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
+  view: {
     flex: 1,
     backgroundColor: '#F5FCFF',
   },
@@ -29,4 +31,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('gmapweather', () => Gmapweather);
+AppRegistry.registerComponent('gmapweather', () => App);

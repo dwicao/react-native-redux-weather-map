@@ -4,6 +4,7 @@ import {
 	TextInput,
 	StyleSheet,
 } from 'react-native';
+import API_KEY from './API_KEY';
 
 export default class UserInput extends Component {
 	constructor(props) {
@@ -11,6 +12,7 @@ export default class UserInput extends Component {
 
 		this.state = {
 			text: '',
+			isError: false,
 		};
 
 		this._onChangeText = this._onChangeText.bind(this);
@@ -22,7 +24,14 @@ export default class UserInput extends Component {
 	}
 
 	_onSubmitEditing() {
-		this.setState({ text : 'Submitted -Yay!' });
+		return fetch(`http://api.openweathermap.org/data/2.5/weather?q=${this.state.text}&appid=${API_KEY}`)
+      .then((response) => response.json())
+      .then((responseJson) => {
+      	this.setState({ isError: false });
+      })
+      .catch((error) => {
+      	this.setState({ isError: true });
+      });
 	}
 
 	render() {

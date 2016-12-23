@@ -4,14 +4,14 @@ import {bindActionCreators} from 'redux';
 import { View } from 'react-native';
 import * as weatherActions from './src/actions/weatherActions';
 
-import MapsContainer from './src/components/MapsContainer';
+import Maps from './src/components/Maps';
 import UserInput from './src/components/UserInput';
 
 class Main extends Component {
   render() {
     return (
       <View style={this.props.viewStyle}>
-        <MapsContainer style={this.props.mapStyle} {...this.props}/>
+        <Maps style={this.props.mapStyle} {...this.props}/>
       	<UserInput {...this.props} />
       </View>
     );

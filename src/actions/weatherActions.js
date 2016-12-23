@@ -9,6 +9,9 @@ export function fetchWeatherByCity(city) {
       .then((response) => response.json())
       .then((responseJson) => {
         dispatch({ type: types.FETCH_WEATHER_BY_CITY, payload: responseJson })
+      })
+      .catch((error) => {
+        throw(error);
       });
   }
 }
@@ -21,6 +24,9 @@ export function fetchWeatherByCoord(lat, lon) {
       .then((response) => response.json())
       .then((responseJson) => {
         dispatch({ type: types.FETCH_WEATHER_BY_CITY, payload: responseJson })
+      })
+      .catch((error) => {
+        throw(error);
       });
   }
 }

@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import MapView from 'react-native-maps';
+import { Alert } from 'react-native';
 
 export default class Maps extends Component {
 	shouldComponentUpdate() {
@@ -7,15 +8,21 @@ export default class Maps extends Component {
 	}
 
 	componentWillReceiveProps(nextProps) {
-		const nextLat = nextProps.weather.coord.lat;
-		const nextLon = nextProps.weather.coord.lon;
-		const nextRegion = {
-			latitude: nextLat,
-			longitude: nextLon,
-			latitudeDelta: 0.2,
-			longitudeDelta: 0.2
-		};
-		this.map.animateToRegion(nextRegion);
+		if (nextProps.weather.coord) {
+			const nextLat = nextProps.weather.coord.lat;
+			const nextLon = nextProps.weather.coord.lon;
+			const nextRegion = {
+				latitude: nextLat,
+				longitude: nextLon,
+				latitudeDelta: 0.2,
+				longitudeDelta: 0.2
+			};
+			this.map.animateToRegion(nextRegion);
+		}
+
+		if (nextProps.weather.message) {
+			Alert.alert(nextProps.weather.message);
+		}
 	}
 
 	render() {

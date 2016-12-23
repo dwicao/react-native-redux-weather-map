@@ -6,6 +6,7 @@ import * as weatherActions from './src/actions/weatherActions';
 
 import Maps from './src/components/Maps';
 import UserInput from './src/components/UserInput';
+import WeatherInfo from './src/components/WeatherInfo';
 
 class Main extends Component {
   render() {
@@ -13,6 +14,7 @@ class Main extends Component {
       <View style={this.props.viewStyle}>
         <Maps style={this.props.mapStyle} {...this.props}/>
       	<UserInput {...this.props} />
+        <WeatherInfo {...this.props} />
       </View>
     );
   }

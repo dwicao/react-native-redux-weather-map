@@ -41,6 +41,7 @@ export default class Maps extends Component {
 
 	render() {
 		return <MapView style={this.props.style}
+						showsPointsOfInterest={true}
 					  initialRegion={{
 					    latitude: -7.967419,
 					    longitude: 112.633153,

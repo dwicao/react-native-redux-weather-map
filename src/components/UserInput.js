@@ -40,7 +40,7 @@ export default class UserInput extends Component {
 const styles = StyleSheet.create({
 	textInput: {
 		height: 40,
-		marginVertical: 30,
+		marginTop: 30,
 		marginHorizontal: 10,
 		padding: 10,
 		borderWidth: 0,

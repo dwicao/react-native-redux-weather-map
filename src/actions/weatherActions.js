@@ -17,13 +17,13 @@ export function fetchWeatherByCity(city) {
 }
 
 export function fetchWeatherByCoord(lat, lon) {
-  const uri = fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=${KEY}`);
+  const uri = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=${KEY}`;
 
   return (dispatch) => {
     return fetch(uri)
       .then((response) => response.json())
       .then((responseJson) => {
-        dispatch({ type: types.FETCH_WEATHER_BY_CITY, payload: responseJson })
+        dispatch({ type: types.FETCH_WEATHER_BY_COORD, payload: responseJson })
       })
       .catch((error) => {
         throw(error);

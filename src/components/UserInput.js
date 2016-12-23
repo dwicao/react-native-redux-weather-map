@@ -14,11 +14,13 @@ export default class UserInput extends Component {
 	}
 
 	_onChangeText(text) {
-		console.log('this.textInput._getText()', this.textInput._getText())
-		this.setState( Object.assign({}, this.state, { text }) );
+		this.setState({ text });
 	}
 
 	_onSubmitEditing() {
+		const text = this.textInput._getText();
+
+		this.props.actions.fetchWeatherByCity(text);
 		this.textInput.clear();
 	}
 

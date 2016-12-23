@@ -7,7 +7,7 @@ export default class Maps extends Component {
 	}
 
 	render() {
-		return <MapView style={this.props.mapStyle}
+		return <MapView style={this.props.style}
 					  initialRegion={{
 					    latitude: -7.967419,
 					    longitude: 112.633153,

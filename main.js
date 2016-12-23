@@ -11,7 +11,7 @@ class Main extends Component {
   render() {
     return (
       <View style={this.props.viewStyle}>
-        <MapsContainer mapStyle={this.props.mapStyle} {...this.props}/>
+        <MapsContainer style={this.props.mapStyle} {...this.props}/>
       	<UserInput {...this.props} />
       </View>
     );

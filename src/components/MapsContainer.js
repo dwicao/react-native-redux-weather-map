@@ -3,7 +3,7 @@ import Maps from './Maps';
 
 export default class MapsContainer extends Component {
 	render() {
-		return <Maps mapStyle={this.props.mapStyle}
+		return <Maps style={this.props.style}
 						{...this.props}
 					/>;
 	}

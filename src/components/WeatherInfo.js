@@ -7,7 +7,6 @@ import {
 } from 'react-native';
 
 export default class WeatherInfo extends Component {
-
 	kelvinToCelcius(temperature) {
     return Math.floor( Number(temperature) - 273.15 );
   }
@@ -16,52 +15,54 @@ export default class WeatherInfo extends Component {
     return str.charAt(0).toUpperCase() + str.slice(1);
   }
 
-	_renderHelper() {
+	_renderIfNotEmpty() {
 		const {weather} = this.props;
-		const isEmpty = Object.keys(weather).length === 0;
-
-		if (isEmpty) {
-			return (
-				<View style={styles.containerNone}>
-					<Text style={styles.none}>
-						Please use search box or click on map! 
-					</Text>
-				</View>
-			);
-		} else {
-			return (
-				<View style={styles.container}>
-					<View style={styles.left}>
-						<Image
-							style={styles.image}
-							source={{uri: `http://openweathermap.org/img/w/${this.props.weather.weather[0].icon}.png`}} />
-						<View style={styles.leftText}>
-							<Text style={styles.text}>
-								{this.kelvinToCelcius(
-									this.props.weather.main.temp
-								)}
-								&deg;
-								{'C'}
-							</Text>
-							<Text style={styles.description}>
-								{this.capitalizeFirstLetter(
-									this.props.weather.weather[0].description
-								)}
-							</Text>
-						</View>
-					</View>
-					<View style={styles.right}>
-						<Text style={styles.rightText}>
-							{this.props.weather.name}
+		return (
+			<View style={styles.container}>
+				<View style={styles.left}>
+					<Image
+						style={styles.image}
+						source={{uri: `http://openweathermap.org/img/w/${weather.weather[0].icon}.png`}} />
+					<View style={styles.leftText}>
+						<Text style={styles.text}>
+							{this.kelvinToCelcius(
+								weather.main.temp
+							)}
+							&deg;
+							{'C'}
+						</Text>
+						<Text style={styles.description}>
+							{this.capitalizeFirstLetter(
+								weather.weather[0].description
+							)}
 						</Text>
 					</View>
 				</View>
-			);
-		}
+				<View style={styles.right}>
+					<Text style={styles.rightText}>
+						{weather.name}
+					</Text>
+				</View>
+			</View>
+		);
 	}
 
+	_renderIfEmpty() {
+		return (
+			<View style={styles.containerNone}>
+				<Text style={styles.none}>
+					Please use search box or click on map! 
+				</Text>
+			</View>
+		);
+	}
+	
 	render() {
-		return this._renderHelper();
+		if (this.props.weather.message) {
+				return this._renderIfEmpty();
+		}
+
+		return this._renderIfNotEmpty();
 	}
 }
 

@@ -58,8 +58,11 @@ export default class WeatherInfo extends Component {
 	}
 	
 	render() {
-		if (this.props.weather.message) {
-				return this._renderIfEmpty();
+		const {weather} = this.props;
+		const isEmpty = Object.keys(weather).length === 0;
+
+		if (isEmpty || !weather.coord) {
+			return this._renderIfEmpty();
 		}
 
 		return this._renderIfNotEmpty();

@@ -1,4 +1,4 @@
-package com.gmapweather;
+package com.dwicao.gmapweather;
 
 import android.app.Application;
 import android.util.Log;

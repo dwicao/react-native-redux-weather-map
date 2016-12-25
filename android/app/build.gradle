@@ -80,14 +80,14 @@ def enableSeparateBuildPerCPUArchitecture = false
 /**
  * Run Proguard to shrink the Java bytecode in release builds.
  */
-def enableProguardInReleaseBuilds = false
+def enableProguardInReleaseBuilds = true
 
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.1"
 
     defaultConfig {
-        applicationId "com.gmapweather"
+        applicationId "com.dwicao.gmapweather"
         minSdkVersion 16
         targetSdkVersion 22
         versionCode 1

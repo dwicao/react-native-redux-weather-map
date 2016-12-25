@@ -1,4 +1,4 @@
-package com.gmapweather;
+package com.dwicao.gmapweather;
 
 import com.facebook.react.ReactActivity;
 

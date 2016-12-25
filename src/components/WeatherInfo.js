@@ -15,6 +15,16 @@ export default class WeatherInfo extends Component {
     return str.charAt(0).toUpperCase() + str.slice(1);
   }
 
+  dropString(str) {
+  	const arrayOfString = str.split(' ');
+  	const firstTwoWords = arrayOfString.slice(0, 2).join(' ');
+  	const nextWords = arrayOfString.slice(2).join(' ');
+  	if (arrayOfString.length > 4) {
+  		return arrayOfString.slice(0, 4).join(' ') + '...';
+  	}
+  	return `${firstTwoWords}\n${nextWords}`;
+  }
+
 	_renderIfNotEmpty() {
 		const {weather} = this.props;
 		return (
@@ -40,7 +50,7 @@ export default class WeatherInfo extends Component {
 				</View>
 				<View style={styles.right}>
 					<Text style={styles.rightText}>
-						{weather.name}
+						{this.dropString(weather.name)}
 					</Text>
 				</View>
 			</View>
@@ -106,6 +116,9 @@ const styles = StyleSheet.create({
 	},
 	right: {
 		marginRight: 20,
+	},
+	rightText: {
+		textAlign: 'right',
 	},
 	none: {
 		alignItems: 'center',

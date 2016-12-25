@@ -22,8 +22,8 @@ export default class Maps extends Component {
 			const nextRegion = {
 				latitude: nextLat,
 				longitude: nextLon,
-				latitudeDelta: 0.5,
-				longitudeDelta: 0.5,
+				latitudeDelta: 0.2,
+				longitudeDelta: 0.2,
 			};
 			this.map.animateToRegion(nextRegion);
 		}

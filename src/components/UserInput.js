@@ -30,6 +30,7 @@ export default class UserInput extends Component {
 						onSubmitEditing={this._onSubmitEditing}
 						value={this.state.text}
 						autoCorrect={false}
+						underlineColorAndroid={'rgba(0,0,0,0)'}
 						ref={el => this.textInput = el}
 						returnKeyType={'search'}
 					 	placeholder="Enter a City or Place..."
@@ -40,7 +41,7 @@ export default class UserInput extends Component {
 const styles = StyleSheet.create({
 	textInput: {
 		height: 40,
-		marginTop: 30,
+		marginTop: 20,
 		marginHorizontal: 10,
 		padding: 10,
 		borderWidth: 0,

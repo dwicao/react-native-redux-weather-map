@@ -3,14 +3,17 @@ import {
   AppRegistry,
   StyleSheet,
 } from 'react-native';
-import Main from './main';
 import { Provider } from 'react-redux';
+import Style from './src/utils/Style';
 import configureStore from './src/store/configureStore';
+import Main from './main';
 
 const store = configureStore();
 
 export default class App extends Component {
   render() {
+    console.log(Style.DEVICE_HEIGHT);
+    console.log(Style.DEVICE_WIDTH)
     return (
         <Provider store={store}>
           <Main
@@ -24,10 +27,8 @@ export default class App extends Component {
 const styles = StyleSheet.create({
   view: {
     ...StyleSheet.absoluteFillObject,
-    height: 400,
-    width: 400,
-    justifyContent: 'flex-end',
-    alignItems: 'center',
+    height: Style.DEVICE_HEIGHT - 20,
+    width: Style.DEVICE_WIDTH,
   },
   map: {
     ...StyleSheet.absoluteFillObject,

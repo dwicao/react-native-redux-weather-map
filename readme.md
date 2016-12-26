@@ -1,10 +1,10 @@
 # React Native Redux Weather Map
 ### Install at local:
 Open Terminal, then type command:  
-> git clone https://github.com/dwicao/react-native-drum-kit.git
+> git clone https://github.com/dwicao/react-native-redux-weather-map.git
 
 Go to project folder :
-> cd react-native-drum-kit
+> cd react-native-redux-weather-map
 
 Type following command :  
 > npm install  

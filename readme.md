@@ -1,4 +1,4 @@
-# React Native Drum Kit
+# React Native Redux Weather Map
 ### Install at local:
 Open Terminal, then type command:  
 > git clone https://github.com/dwicao/react-native-drum-kit.git

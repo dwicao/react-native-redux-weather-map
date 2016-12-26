@@ -49,7 +49,7 @@ To build .apk file just type :
 You must sign .apk with keystore, to do this just type in your terminal :  
 > npm run android-signer
 
-The .apk file is located at `react-native-drum-kit/android/app/build/outputs/apk/app-release-unsigned.apk`
+The .apk file is located at `react-native-redux-weather-map/android/app/build/outputs/apk/app-release-unsigned.apk`
 
 
 ###  Available Command  

@@ -59,6 +59,8 @@ The .apk file is located at `react-native-redux-weather-map/android/app/build/ou
 | adb-reverse | Reset port ADB to tcp:8081 |
 | ios-bundle | Bundle with entry file index.ios.js |
 | ios-build  | Run ios project with “Release” configuration |
+| ios-codepush-staging | Push changes your bundle to CodePush Staging environtment |
+| ios-codepush-production | Push changes your bundle to CodePush Production environtment |
 | android-clean | Fix building android if preDexDebug error |
 | android-build-debug | Build android .apk with “Debug” configuration |
 | android-release  | Build android .apk with “Release” configuration  |
@@ -66,6 +68,9 @@ The .apk file is located at `react-native-redux-weather-map/android/app/build/ou
 | android-signer | To sign app-release-unsigned.apk with random keystore |
 | android-dev | Run android development-mode on simulator |
 | android-bundle | Bundle with entry file index.android.js |
+| codepush-key | View your staging and development key at CodePush |
+| android-codepush-staging | Push changes your bundle to CodePush Staging environtment |
+| android-codepush-production | Push changes your bundle to CodePush Production environtment |
  
  
 ### License

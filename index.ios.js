@@ -1,3 +1,4 @@
+import codePush from "react-native-code-push";
 import React, { Component } from 'react';
 import {
   AppRegistry,
@@ -10,6 +11,10 @@ import configureStore from './src/store/configureStore';
 const store = configureStore();
 
 export default class App extends Component {
+  componentDidMount() {
+    codepush.sync({installMode: codepush.InstallMode.IMMEDIATE});
+  }
+
   render() {
     return (
         <Provider store={store}>
@@ -31,4 +36,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('gmapweather', () => App);
+AppRegistry.registerComponent('gmapweather', () => codePush(App) );

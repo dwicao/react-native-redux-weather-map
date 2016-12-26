@@ -1,5 +1,6 @@
 #key
-/src/api/
+src/api/
+android/gradle.properties
 
 # OSX
 #

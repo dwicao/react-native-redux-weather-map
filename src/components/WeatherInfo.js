@@ -19,9 +19,15 @@ export default class WeatherInfo extends Component {
   	const arrayOfString = str.split(' ');
   	const firstTwoWords = arrayOfString.slice(0, 2).join(' ');
   	const nextWords = arrayOfString.slice(2).join(' ');
+  	
   	if (arrayOfString.length > 4) {
   		return arrayOfString.slice(0, 4).join(' ') + '...';
   	}
+
+  	if (arrayOfString.length === 1) {
+  		return str;
+  	}
+
   	return `${firstTwoWords}\n${nextWords}`;
   }
 
@@ -119,6 +125,7 @@ const styles = StyleSheet.create({
 	},
 	rightText: {
 		textAlign: 'right',
+		fontWeight: 'bold',
 	},
 	none: {
 		alignItems: 'center',

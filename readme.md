@@ -35,7 +35,7 @@ CODEPUSH_RELEASE_KEY = "insert_your_code_here"
 
 To get API_KEY  you must register an OpenWeatherMap account at [HERE](http://openweathermap.org/)
 
-Go to `react-native-redux-weather-map/` and create folder named `api` and inside that folder create a file named `KEY.js`, and inside that file please fill with this lines of code : 
+Go to `react-native-redux-weather-map/src` and create folder named `api` and inside that folder create a file named `KEY.js`, and inside that file please fill with this lines of code : 
 
 ```  
 const API_KEY = 'insert_with_your_API_code';

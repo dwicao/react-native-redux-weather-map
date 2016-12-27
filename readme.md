@@ -1,4 +1,7 @@
-# React Native Redux Weather Map
+# React Native Redux Weather Map  
+
+![demo](https://raw.githubusercontent.com/dwicao/react-native-redux-weather-map/master/demo.gif)
+
 ### Install at local:
 Open Terminal, then type command:  
 > git clone https://github.com/dwicao/react-native-redux-weather-map.git

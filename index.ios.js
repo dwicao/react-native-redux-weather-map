@@ -12,7 +12,7 @@ const store = configureStore();
 
 export default class App extends Component {
   componentDidMount() {
-    codepush.sync({installMode: codepush.InstallMode.IMMEDIATE});
+    codePush.sync({installMode: codePush.InstallMode.IMMEDIATE});
   }
 
   render() {

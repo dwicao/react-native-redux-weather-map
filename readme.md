@@ -15,7 +15,10 @@ Type following command :
 You must have ANDROID_HOME environtment variable, to check if you already have, type in your terminal :  
 > echo $ANDROID_HOME  
 
-If blank, you can read at [HERE](https://goo.gl/XSBmwE)
+If blank, you can read at [HERE](https://goo.gl/XSBmwE)  
+
+Make sure you have already installed React Native globally by running this command :  
+> sudo npm install -g react-native-cli
 
 In your terminal type this to make sure react-native know each addons modules in this app :  
 > react-native link
@@ -41,7 +44,10 @@ export default API_KEY;
 
 At this point, you should be able to run the project.
 To run your project on your device/emulator at Debug configuration, type :
-> npm run android-dev
+> npm run android-dev  
+
+Or if you want to run at iOS simulator, run:  
+> react-native run-ios
  
 If you have error message like `Execution failed for task ':app:dexDebug'.` run this on your terminal :  
 > npm run android-clean

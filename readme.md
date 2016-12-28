@@ -1,8 +1,11 @@
 # React Native Redux Weather Map  
 
-![demo](https://raw.githubusercontent.com/dwicao/react-native-redux-weather-map/master/demo.gif)
+![demo](https://raw.githubusercontent.com/dwicao/react-native-redux-weather-map/master/demo.gif)  
 
-### Install at local:
+## Downloads  
+[weather-map.apk](https://github.com/dwicao/react-native-redux-weather-map/releases/download/v1.0/weather-map.apk)
+
+## Install at local:
 Open Terminal, then type command:  
 > git clone https://github.com/dwicao/react-native-redux-weather-map.git
 
@@ -61,7 +64,7 @@ You must sign .apk with keystore, to do this just type in your terminal :
 The .apk file is located at `react-native-redux-weather-map/android/app/build/outputs/apk/app-release-unsigned.apk`
 
 
-###  Available Command  
+##  Available Command  
 
 | npm run ... | Description |
 | --- | --- |
@@ -82,7 +85,7 @@ The .apk file is located at `react-native-redux-weather-map/android/app/build/ou
 | android-codepush-production | Push changes your bundle to CodePush Production environtment |
  
  
-### License
+## License
 **MIT**  
 
 

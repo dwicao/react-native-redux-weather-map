@@ -20,12 +20,10 @@ export default class WeatherInfo extends Component {
   	const firstTwoWords = arrayOfString.slice(0, 2).join(' ');
   	const nextWords = arrayOfString.slice(2).join(' ');
   	
-  	if (arrayOfString.length > 4) {
-  		return arrayOfString.slice(0, 4).join(' ') + '...';
-  	}
+  	if (arrayOfString.length <= 2) return str;
 
-  	if (arrayOfString.length === 1) {
-  		return str;
+  	if (arrayOfString.length >= 5) {
+  		return arrayOfString.slice(0, 4).join(' ') + '...';
   	}
 
   	return `${firstTwoWords}\n${nextWords}`;

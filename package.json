@@ -6,6 +6,7 @@
     "codepush-key": "code-push deployment ls gmapweather -k",
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "adb-reverse": "adb reverse tcp:8081 tcp:8081",
+    "ios-dev": "react-native run-ios --simulator='iPhone 5'",
     "ios-codepush-staging": "code-push release-react gmapweather ios",
     "ios-codepush-production": "code-push release-react gmapweather ios -d Production",
     "ios-bundle": "react-native bundle --dev false --entry-file index.ios.js --bundle-output ios/main.jsbundle --platform ios",
